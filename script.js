@@ -11,15 +11,12 @@ function readTextFile(file, callback) {
     rawFile.send(null);
 }
 
-var port_data;
-
 readTextFile("port_data.json", function(text){
     port_data = JSON.parse(text);
     console.log(port_data);
 });
 
-var port_title = port_data.title;
 
 $('.port_title').each(function(i, obj) {
-    this.html(port_title);
+    $(obj).html(port_data.title);
 });
