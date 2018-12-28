@@ -13,9 +13,11 @@ function readTextFile(file, callback) {
 
 //usage:
 readTextFile("port_data.json", function(text){
-    var data = JSON.parse(text);
-    console.log(data);
+    var port_data = JSON.parse(text);
+    console.log(port_data);
 });
+
+var port_title = port_data.title;
 
 $('.port_title').each(function(i, obj) {
     this.html(port_title);
