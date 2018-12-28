@@ -2,15 +2,15 @@
 	"title": "Portfolio Title",
 	"desc": "This is my portfolio",
 	"cards": [
-		[
+		{
 			"title": "First Card",
 			"sub": "Wooow",
 			"desc": "Here is a really cool first card"
-		],
-		[
+		},
+		{
 			"title": "Second Card",
 			"sub": "Wooow",
 			"desc": "Here is a really cool second card"
-		]
+		}
 	]
 }
