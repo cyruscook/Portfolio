@@ -31,7 +31,24 @@ function writeVars(){
 		$(obj).html(port_data.title);
 	});
 	
+	// Write Port_Desc
 	$('.port_desc').each(function(i, obj) {
 		$(obj).html(port_data.desc);
 	});
+	
+	// Write Cards
+	function writeCard(card){
+		var elem = document.createElement('div');
+		elem.setAttribute("class", "card");
+		elem.setAttribute("style", "width: 18rem;");
+		elem.innerHTML(`
+			<div class="card-body">
+				<h5 class="card-title">` + card.title + `</h5>
+				<h6 class="card-subtitle mb-2 text-muted">` + card.sub + `</h6>
+				<p class="card-text">` + card.desc + `</p>
+			</div>
+		`);
+	}
+	
+	port_data.cards.forEach(writeCard(value));
 };
