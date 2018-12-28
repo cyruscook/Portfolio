@@ -1,30 +1,15 @@
 <html>
 <head>
-	<script>
-		function loadDependencies(){
-			// Load JQuery
-			var tag = document.createElement("script");
-			tag.setAttribute("src", "https://code.jquery.com/jquery-3.3.1.min.js");
-			document.getElementsByTagName("head")[0].appendChild(tag);
-			
-			// Load Bootstrap
-			var tag = document.createElement("link");
-			tag.setAttribute("rel", "stylesheet");
-			tag.setAttribute("href", "https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css");
-			document.getElementsByTagName("head")[0].appendChild(tag);
-			
-			// Load Own Script
-			var tag = document.createElement("script");
-			tag.setAttribute("src", "script.js");
-			document.getElementsByTagName("head")[0].appendChild(tag);
-		}
-	</script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
 	<title class="port_title">port_title</title>
 </head>
-<body onload="loadDependencies();">
+<body>
 	<div id="head">
 		<h1 class="port_title"></h1>
 	</div>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"></link>
+	<script src="script.js"></script>
 </body>
 </html>
