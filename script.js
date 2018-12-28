@@ -30,4 +30,8 @@ function writeVars(){
 	$('.port_title').each(function(i, obj) {
 		$(obj).html(port_data.title);
 	});
+	
+	$('.port_desc').each(function(i, obj) {
+		$(obj).html(port_data.desc);
+	});
 };
