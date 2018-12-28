@@ -11,6 +11,8 @@ function readTextFile(file, callback) {
     rawFile.send(null);
 }
 
+var port_data;
+
 readTextFile("port_data.json", function(text){
     port_data = JSON.parse(text);
     console.log(port_data);
