@@ -1,6 +1,22 @@
 <html>
 <head>
-	<script src="script.js"></script>
+	<script>
+		function loadJS(){
+			// Load JQuery
+			var tag = document.createElement("script");
+			tag.src = "https://code.jquery.com/jquery-3.3.1.min.js";
+			document.getElementsByTagName("head")[0].appendChild(tag);
+			
+			// Load Own Script
+			var tag = document.createElement("script");
+			tag.src = "script.js";
+			document.getElementsByTagName("head")[0].appendChild(tag);
+		}
+	</script>
 
 	<title id="port_title">port_title</title>
 </head>
+<body onload="loadJS();">
+
+</body>
+</html>
