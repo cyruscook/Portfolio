@@ -1,22 +1,28 @@
 <html>
 <head>
 	<script>
-		function loadJS(){
+		function loadDependencies(){
 			// Load JQuery
 			var tag = document.createElement("script");
-			tag.src = "https://code.jquery.com/jquery-3.3.1.min.js";
+			tag.setAttribute("src", "https://code.jquery.com/jquery-3.3.1.min.js");
+			document.getElementsByTagName("head")[0].appendChild(tag);
+			
+			// Load Bootstrap
+			var tag = document.createElement("link");
+			tag.setAttribute("rel", "stylesheet");
+			tag.setAttribute("href", "https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css");
 			document.getElementsByTagName("head")[0].appendChild(tag);
 			
 			// Load Own Script
 			var tag = document.createElement("script");
-			tag.src = "script.js";
+			tag.setAttribute("src", "script.js");
 			document.getElementsByTagName("head")[0].appendChild(tag);
 		}
 	</script>
 
 	<title id="port_title">port_title</title>
 </head>
-<body onload="loadJS();">
-
+<body onload="loadDependencies();">
+	<
 </body>
 </html>
