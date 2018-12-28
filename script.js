@@ -11,14 +11,23 @@ function readTextFile(file, callback) {
     rawFile.send(null);
 }
 
+// Declare Global port_data variable
 var port_data;
 
+// Get Json contents
 readTextFile("port_data.json", function(text){
+	// On Json loaded put in variable
     port_data = JSON.parse(text);
     console.log(port_data);
+	
+	// Write Json variables to the page
+	writeVars();
 });
 
-
-$('.port_title').each(function(i, obj) {
-    $(obj).html(port_data.title);
-});
+function writeVars(){
+	
+	// Write Port_Title
+	$('.port_title').each(function(i, obj) {
+		$(obj).html(port_data.title);
+	});
+};
