@@ -48,6 +48,7 @@ function writeVars(){
 				<p class="card-text">` + card.desc + `</p>
 			</div>
 		`);
+		$("#body").appendChild(elem);
 	}
 	
 	port_data.cards.forEach(writeCard(value));
