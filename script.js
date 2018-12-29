@@ -48,6 +48,9 @@ readTextFile("port_data.json", function(text){
 	
 	// Write Json variables to the page
 	writeVars();
+	
+	// Remove loading screen
+	pageloaded = true;
 });
 
 function writeVars(){
