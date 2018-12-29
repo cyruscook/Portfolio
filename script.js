@@ -37,7 +37,7 @@ function writeVars(){
 	});
 	
 	// Write Cards (If there are any to write)
-	if(cards.length > 0){
+	if(port_data.cards.length > 0){
 		// Create deck to contain cards
 		$('#body').append($('<div class="container" id="card-container"></div>'));
 		$('#card-container').append($('<div class="card-deck" id="deck"></div>'));
