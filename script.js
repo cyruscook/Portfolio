@@ -46,7 +46,7 @@ function writeVars(){
 		port_data.cards.forEach(function(card){
 			
 			// Construct card
-			var imagecode = '<center><img src="` + card.img.url + `" style="margin-top: calc(( ` + card.img.height + ` / 2) * -1); background-color: #666; width: ` + card.img.width + `; height: ` + card.img.width + `;"></img></center>';
+			var imagecode = '<center><img src="' + card.img.url + '" style="margin-top: calc(( ' + card.img.height + ' / 2) * -1); background-color: #666; width: ' + card.img.width + '; height: ' + card.img.width + ';"></img></center>';
 			
 			var thiscard = `
 				<div class="card my-3">
