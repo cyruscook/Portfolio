@@ -7,7 +7,7 @@
 			"sub": "Wooow",
 			"desc": "Here is a really cool first card",
 			"img": {
-				"url": "",
+				"url": "http://placehold.it/100x100",
 				"width": "100px",
 				"height": "100px"
 			}
@@ -17,7 +17,7 @@
 			"sub": "Wooow",
 			"desc": "Here is a really cool second card",
 			"img": {
-				"url": "",
+				"url": "http://placehold.it/100x100",
 				"width": "100px",
 				"height": "100px"
 			}
