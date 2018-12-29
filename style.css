@@ -1,3 +1,19 @@
+body{
+	padding: 15;
+}
+
+// Thank you https://blog.hellojs.org/create-a-very-basic-loading-screen-using-only-javascript-css-3cf099c48b19
+
+#loading{
+  z-index: 10;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
 // Thank you https://codepen.io/migli/pen/OQVRMw
 
 // Bootstrap 4 breakpoints & gutter

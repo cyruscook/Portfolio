@@ -1,3 +1,29 @@
+// Thank you https://blog.hellojs.org/create-a-very-basic-loading-screen-using-only-javascript-css-3cf099c48b19
+var pageloaded = false;
+
+$(document).ready(function() {
+	var loadingtimeout = setTimeout(function(){
+		var div = $('#loading');
+		if(!pageloaded){
+			switch(div.text()){
+				case "Loading":
+					div.text("Loading.");
+				case "Loading.":
+					div.text("Loading..");
+				case "Loading..":
+					div.text("Loading...");
+				case "Loading...":
+					div.text("Loading");
+				default:
+					div.text("Loading");
+			}
+		} else{
+			div.remove();
+			clearTimeout(loadingtimeout);
+		}
+	},10);
+});
+
 // Thanks https://stackoverflow.com/a/34579496/7641587
 function readTextFile(file, callback) {
     var rawFile = new XMLHttpRequest();
