@@ -36,21 +36,28 @@ function writeVars(){
 		$(obj).html(port_data.desc);
 	});
 	
-	// Write Cards
-	port_data.cards.forEach(function(card){
+	// Write Cards (If there are any to write)
+	if(cards.length > 0){
+		// Create deck to contain cards
+		$('#body').append($('<div class="container" id="card-container"></div>'));
+		$('#card-container').append($('<div class="card-deck" id="deck"></div>'));
 		
-		// Construct card
-		var thiscard = `
-			<div class="card" style="width: 18rem;">
-				<div class="card-body">
-					<h5 class="card-title">` + card.title + `</h5>
-					<h6 class="card-subtitle mb-2 text-muted">` + card.sub + `</h6>
-					<p class="card-text">` + card.desc + `</p>
+		// For each card add it to the deck
+		port_data.cards.forEach(function(card){
+			
+			// Construct card
+			var thiscard = `
+				<div class="card my-3">
+					<div class="card-body">
+						<h5 class="card-title">` + card.title + `</h5>
+						<h6 class="card-subtitle mb-2 text-muted">` + card.sub + `</h6>
+						<p class="card-text">` + card.desc + `</p>
+					</div>
 				</div>
-			</div>
-		`;
-		
-		// Add the card into the page
-		$("#body").append($(thiscard));
-	});
+			`;
+			
+			// Add the card into the page
+			$('#deck').append($(thiscard));
+		});
+	}
 };
