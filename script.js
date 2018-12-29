@@ -46,9 +46,16 @@ function writeVars(){
 		port_data.cards.forEach(function(card){
 			
 			// Construct card
+			var imagecode = '<center><img src="` + card.img.url + `" style="margin-top: calc(( ` + card.img.height + ` / 2) * -1); background-color: #666; width: ` + card.img.width + `; height: ` + card.img.width + `;"></img></center>';
+			
 			var thiscard = `
 				<div class="card my-3">
-					<center><img src="` + card.img.url + `" style="margin-top: calc(( ` + card.img.height + ` / 2) * -1); background-color: #666; width: ` + card.img.width + `; height: ` + card.img.width + `;"></img></center>
+					`
+					+
+					// If there is a url set then show the image
+					(card.img.url ? imagecode : '')
+					+
+					`
 					<div class="card-body">
 						<h5 class="card-title">` + card.title + `</h5>
 						<h6 class="card-subtitle mb-2 text-muted">` + card.sub + `</h6>
