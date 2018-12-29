@@ -6,6 +6,11 @@
 			"title": "First Card",
 			"sub": "Wooow",
 			"desc": "Here is a really cool first card"
+			"img": {
+				"url": "",
+				"width": "100px";
+				"height": "100px";
+			}
 		},
 		{
 			"title": "Second Card",
