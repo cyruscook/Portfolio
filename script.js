@@ -86,7 +86,7 @@ function writeVars(){
 			}
 			
 			var thiscard = `
-				<div class="card my-3" style="calc( ${card.img.height} * 0.75 )">
+				<div class="card my-3" style="margin-top: calc( ${card.img.height} * 0.75 ) !important;">
 					${imagecode}
 					<div class="card-body">
 						<h5 class="card-title">` + card.title + `</h5>
