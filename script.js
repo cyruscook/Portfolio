@@ -65,7 +65,7 @@ function writeVars(){
 			}
 			
 			var thiscard = `
-				<div class="card my-3" style="margintop: ${margin-top} !important;">
+				<div class="card my-3" style="margin-top: ${margintop} !important;">
 					${imagecode}
 					<div class="card-body">
 						<h5 class="card-title">` + card.title + `</h5>
