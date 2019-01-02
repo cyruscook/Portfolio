@@ -77,7 +77,7 @@ function writeVars(){
 			
 			// If this card has an image, set up the card to accommodate that image
 			if(get_if_exist(card.img) != undefined){
-				imagecode = `<center><img src="${card.img.url}" style="margin-top: ${biggestMargin * -1}; background-color: #666; width: ${card.img.width}; height: ${card.img.width}; border-radius: ${card.img["border-radius"]};"></img></center>`;
+				imagecode = `<center><img src="${card.img.url}" style="margin-top: calc(${biggestMargin}  * -1); background-color: #666; width: ${card.img.width}; height: ${card.img.width}; border-radius: ${card.img["border-radius"]};"></img></center>`;
 				margintop = biggestMargin * 0.75;
 			}
 			
