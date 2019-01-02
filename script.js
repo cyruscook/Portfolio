@@ -47,7 +47,7 @@ function writeVars(){
 		$(obj).html(port_data.desc);
 	});
 	
-	function findBiggestMargin{
+	function findBiggestMargin(){
 		var biggestMargin = 0;
 		if(port_data.cards.length > 0){
 			port_data.cards.forEach(function(card){
