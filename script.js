@@ -2,8 +2,8 @@ var pageloaded = false;
 
 // Thanks https://stackoverflow.com/a/41532415/7641587
 function get_if_exist(str) {
-    try { return eval(str) }
-    catch(e) { return undefined }
+    try { return eval(str); }
+    catch(e) { return undefined; }
 }
 
 // Thanks https://stackoverflow.com/a/34579496/7641587
@@ -56,7 +56,7 @@ function writeVars(){
 						biggestMargin = card.img.height;
 					}
 				}
-			}
+			});
 		}
 	}
 	
