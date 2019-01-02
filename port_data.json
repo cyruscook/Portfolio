@@ -8,8 +8,8 @@
 			"desc": "Here is a really cool first card",
 			"img": {
 				"url": "https://placehold.it/100x100",
-				"width": "100px",
-				"height": "100px",
+				"width": "100",
+				"height": "100",
 				"border-radius": "10%"
 			}
 		},
@@ -19,8 +19,8 @@
 			"desc": "Here is a really cool second card",
 			"img": {
 				"url": "https://placehold.it/100x100",
-				"width": "100px",
-				"height": "100px",
+				"width": "100",
+				"height": "100",
 				"border-radius": "50%"
 			}
 		},
@@ -40,8 +40,8 @@
 			"desc": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in",
 			"img": {
 				"url": "https://placehold.it/50x50",
-				"width": "50px",
-				"height": "50px"
+				"width": "50",
+				"height": "50"
 			}
 		}
 	]

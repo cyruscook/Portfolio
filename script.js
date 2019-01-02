@@ -47,11 +47,26 @@ function writeVars(){
 		$(obj).html(port_data.desc);
 	});
 	
+	function findBiggestMargin{
+		var biggestMargin = 0;
+		if(port_data.cards.length > 0){
+			port_data.cards.forEach(function(card){
+				if(get_if_exist(card.img) != undefined){
+					if(card.img.height > biggestMargin){
+						biggestMargin = card.img.height;
+					}
+				}
+			}
+		}
+	}
+	
 	// Write Cards (If there are any to write)
 	if(port_data.cards.length > 0){
 		// Create deck to contain cards
 		$('#body').append($('<div class="container" id="card-container"></div>'));
 		$('#card-container').append($('<div class="card-deck" id="deck"></div>'));
+		
+		var biggestMargin = findBiggestMargin();
 		
 		// For each card add it to the deck
 		port_data.cards.forEach(function(card){
@@ -59,13 +74,15 @@ function writeVars(){
 			// Construct card
 			var imagecode = "";
 			var margintop = "";
+			
+			// If this card has an image, set up the card to accommodate that image
 			if(get_if_exist(card.img) != undefined){
 				imagecode = `<center><img src="${card.img.url}" style="margin-top: calc(( ${card.img.height} / 2) * -1); background-color: #666; width: ${card.img.width}; height: ${card.img.width}; border-radius: ${card.img["border-radius"]};"></img></center>`;
-				margintop = `calc(${card.img.height} * 0.75)`;
+				margintop = biggestMargin * 0.75;
 			}
 			
 			var thiscard = `
-				<div class="card my-3" style="margin-top: ${margintop} !important;">
+				<div class="card my-3" style="margin-top: ${margintop}px !important;">
 					${imagecode}
 					<div class="card-body">
 						<h5 class="card-title">` + card.title + `</h5>
