@@ -1,5 +1,11 @@
 var pageloaded = false;
 
+// Thanks https://stackoverflow.com/a/41532415/7641587
+function get_if_exist(str) {
+    try { return eval(str) }
+    catch(e) { return undefined }
+}
+
 // Thanks https://stackoverflow.com/a/34579496/7641587
 function readTextFile(file, callback) {
     var rawFile = new XMLHttpRequest();
@@ -52,7 +58,7 @@ function writeVars(){
 			
 			// Construct card
 			var imagecode = "";
-			if(typeof card.img.url !== 'undefined'){
+			if(get_if_exist(card.img) != undefined){
 				imagecode = `<center><img src="${card.img.url}" style="margin-top: calc(( ${card.img.height} / 2) * -1); background-color: #666; width: ${card.img.width}; height: ${card.img.width}; border-radius: ${card.img["border-radius"]};"></img></center>`;
 			}
 			
