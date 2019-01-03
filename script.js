@@ -48,16 +48,17 @@ function writeVars(){
 	});
 	
 	function findBiggestMargin(){
-		var biggestMargin = 0;
+		var margins = [];
+		// Get each margin into a list
 		if(port_data.cards.length > 0){
 			port_data.cards.forEach(function(card){
 				if(get_if_exist(card.img) != undefined){
-					if(card.img.height > biggestMargin){
-						biggestMargin = card.img.height;
-					}
+					 margins.push(parseInt(card.img.height));
 				}
 			});
 		}
+		// Return the largest one
+		return Math.max(...margins);
 	}
 	
 	// Write Cards (If there are any to write)
@@ -96,4 +97,6 @@ function writeVars(){
 			$('#deck').append($(thiscard));
 		});
 	}
+	
+	${'#loading').hide();
 }
