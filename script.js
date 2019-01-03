@@ -79,7 +79,7 @@ function writeVars(){
 			
 			// If this card has an image, set up the card to accommodate that image
 			if(get_if_exist(card.img) != undefined){
-				imagecode = `<center><img src="${card.img.url}" style="margin-top: calc( (${card.img.height}px / 2 )  * -1); background-color: #666; width: ${card.img.width}; height: ${card.img.width}; border-radius: ${card.img["border-radius"]};"></img></center>`;
+				imagecode = `<center><img class="card-img-top" src="${card.img.url}" style="margin-top: calc( (${card.img.height}px / 2 )  * -1); background-color: #666; width: ${card.img.width}; height: ${card.img.width}; border-radius: ${card.img["border-radius"]};"></img></center>`;
 				imagecompensation = biggestMargin - card.img.height;
 			}
 			
