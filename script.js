@@ -98,5 +98,5 @@ function writeVars(){
 		});
 	}
 	
-	${'#loading').hide();
+	$('#loading').hide();
 }
