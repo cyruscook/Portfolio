@@ -75,16 +75,18 @@ function writeVars(){
 			// Construct card
 			var imagecode = "";
 			var margintop = biggestMargin;
+			var imagecompensation = biggestMargin;
 			
 			// If this card has an image, set up the card to accommodate that image
 			if(get_if_exist(card.img) != undefined){
 				imagecode = `<center><img src="${card.img.url}" style="margin-top: calc( (${card.img.height}px / 2 )  * -1); background-color: #666; width: ${card.img.width}; height: ${card.img.width}; border-radius: ${card.img["border-radius"]};"></img></center>`;
+				imagecompensation = 0;
 			}
 			
 			var thiscard = `
 				<div class="card my-3" style="margin-top: calc(${margintop}px * 0.75) !important;">
 					${imagecode}
-					<div class="card-body">
+					<div class="card-body" style="margin-top: calc( ${imagecompensation}px / 2 );">
 						<h5 class="card-title">` + card.title + `</h5>
 						<h6 class="card-subtitle mb-2 text-muted">` + card.sub + `</h6>
 						<p class="card-text">` + card.desc + `</p>
